@@ -30,7 +30,7 @@ io.on('connection', function(socket) {
 		// console.log('on data:' + json["name"]);
 
 		// iPhoneへ送信
-		io.emit('watayuz-iphone', data);
+		io.emit('toiPhone', data);
 	});
 
 	socket.on('disconnect', function() {
