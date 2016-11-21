@@ -2,12 +2,16 @@
 
 var express = require('express');
 var app = express();
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
+
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-var morgan = require('morgan');
 
 var PORT = 8080;
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(morgan('short'));
 
@@ -17,20 +21,16 @@ app.get('/', function(req, res, next) {
 	// res.send('hello world');
 });
 
-app.post('/', function(req, res, next) {
-	console.log('post: ' + req.body);
-	res.send('hello');
-});
-
 // socket.io
 io.on('connection', function(socket) {
 	console.log('connection');
 
 	socket.on('onMessage', function(data) {
-		console.log('on data:' + data);
+		// var json = JSON.parse(data);
+		// console.log('on data:' + json["name"]);
 
 		// iPhoneへ送信
-		// io.emit('watayuz-iphone', data);
+		io.emit('watayuz-iphone', data);
 	});
 
 	socket.on('disconnect', function() {
