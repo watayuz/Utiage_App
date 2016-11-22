@@ -37,6 +37,13 @@ class ViewController: UIViewController {
                     self.MESSAGE.text = parse.object(forKey: "message") as! String?
                     
                     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                    
+                    // pop up
+                    let alert = UIAlertController(title: self.NAME.text, message: self.MESSAGE.text, preferredStyle: .alert)
+                    let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+                    alert.addAction(OKAction)
+                    self.present(alert, animated: true, completion: nil)
+                    
                 }catch let error as NSError {
                     print(error)
                 }
