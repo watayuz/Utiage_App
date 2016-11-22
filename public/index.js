@@ -1,5 +1,7 @@
 (function() {
-	var socket = io.connect('http://localhost:8080/');
+	// var socket = io.connect('http://localhost:8080/');
+	// var socket = io.connect('http://LowCost-env.yqp8xuypjj.us-west-2.elasticbeanstalk.com:8081');
+	var socket = io.connect('35.164.203.137:8081');
 	var button = document.getElementById('emit_message');
 
 	button.addEventListener('click', function() {
@@ -17,7 +19,7 @@
 	});
 
 	function sendMessage(json) {
-		// console.log('send: ' + msg);
+		console.log('send: ' + json);
 		// var json = JSON.stringify({value: msg});
 		socket.emit('onMessage', json);
 	}

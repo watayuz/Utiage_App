@@ -1,2 +1,2 @@
 github "socketio/socket.io-client-swift"
-github "SwiftyJSON/SwiftyJSON"
+github "lexrus/LTMorphingLabel"

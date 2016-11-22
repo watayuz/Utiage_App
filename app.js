@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-var PORT = 8080;
+var PORT = 8081;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -26,8 +26,8 @@ io.on('connection', function(socket) {
 	console.log('connection');
 
 	socket.on('onMessage', function(data) {
-		// var json = JSON.parse(data);
-		// console.log('on data:' + json["name"]);
+		var json = JSON.parse(data);
+		console.log('on data:' + json["name"]);
 
 		// iPhoneへ送信
 		io.emit('toiPhone', data);
@@ -39,5 +39,5 @@ io.on('connection', function(socket) {
 });
 
 server.listen(PORT, function() {
-	console.log('server is running : port is 8080');
+	console.log('server is running : port is ' + PORT);
 });

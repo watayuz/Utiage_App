@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let socketURL = "http://192.168.1.38:8080"
+        let socketURL = "http://35.164.203.137:8081"
         socket = SocketIOClient(socketURL: URL(string: socketURL)!, config: [.log(true), .forcePolling(true)])
         socket.on("connet") {
             data in
@@ -31,8 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         socket.connect()
-        
-        // Push通知を有効化する
         
         return true
     }

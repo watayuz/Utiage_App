@@ -17,8 +17,6 @@
 		F21C182C1DE374A700BEA9BE /* WatanabeCallSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C182B1DE374A700BEA9BE /* WatanabeCallSystemUITests.swift */; };
 		F21C183C1DE375EC00BEA9BE /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21C183A1DE375E600BEA9BE /* SocketIO.framework */; };
 		F21C183D1DE375EC00BEA9BE /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F21C183A1DE375E600BEA9BE /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F21C18421DE3818100BEA9BE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21C18401DE3817D00BEA9BE /* SwiftyJSON.framework */; };
-		F21C18431DE3818100BEA9BE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F21C18401DE3817D00BEA9BE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F21C18471DE39C2F00BEA9BE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21C18461DE39C2F00BEA9BE /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F21C18431DE3818100BEA9BE /* SwiftyJSON.framework in Embed Frameworks */,
 				F21C183D1DE375EC00BEA9BE /* SocketIO.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -55,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F211DD881DE3A52800DE7D0B /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
 		F21C18051DE374A700BEA9BE /* WatanabeCallSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatanabeCallSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21C18081DE374A700BEA9BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21C180A1DE374A700BEA9BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			files = (
 				F21C18471DE39C2F00BEA9BE /* AudioToolbox.framework in Frameworks */,
 				F21C183C1DE375EC00BEA9BE /* SocketIO.framework in Frameworks */,
-				F21C18421DE3818100BEA9BE /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +155,7 @@
 		F21C18391DE375E600BEA9BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F211DD881DE3A52800DE7D0B /* LTMorphingLabel.framework */,
 				F21C18461DE39C2F00BEA9BE /* AudioToolbox.framework */,
 				F21C18401DE3817D00BEA9BE /* SwiftyJSON.framework */,
 				F21C183A1DE375E600BEA9BE /* SocketIO.framework */,
@@ -581,6 +579,7 @@
 				F21C18321DE374A700BEA9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F21C18331DE374A700BEA9BE /* Build configuration list for PBXNativeTarget "WatanabeCallSystemTests" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +588,7 @@
 				F21C18351DE374A700BEA9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F21C18361DE374A700BEA9BE /* Build configuration list for PBXNativeTarget "WatanabeCallSystemUITests" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +597,7 @@
 				F21C18381DE374A700BEA9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
